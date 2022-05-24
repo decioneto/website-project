@@ -6,47 +6,54 @@ import { useEffect, useState } from 'react'
 
 export function DropdownMenu() {
   const { pathname } = useRouter()
-  const [isOpen, setIsOpen] = useState(true)
+  const [isClosed, setIsClosed] = useState(true)
 
   function toggleMenu() {
-    setIsOpen(!isOpen)
+    setIsClosed(!isClosed)
   }
 
   return (
-    <div className={styles['dropdown--menu']}>
+    <nav className={styles['dropdown--menu']} accessKey="m">
       <button 
         className={styles['dropdown--trigger']}
-        data-close={isOpen}
+        data-close={isClosed}
         onClick={toggleMenu}
         >
         <Menu />
       </button>
-      <div className={`${styles['dropdown--container']} ${isOpen ? [styles.collapsed] : ""}`}>
-        <div className={styles['dropdown--item']}>
+      <ul 
+        className={`${styles['dropdown--container']} ${isClosed ? [styles.collapsed] : ""}`}
+        role="menu"
+        aria-orientation='vertical'
+      >
+        <li className={styles['dropdown--item']} role="menuitem">
           <Link href="/">
             <a
               className={`${pathname === '/' ? [styles.active] : ""}`}
+              onClick={() => setIsClosed(true)}
             >Home</a>
           </Link>
-        </div>
-        <div className={styles['dropdown--item']}>
+        </li>
+        <li className={styles['dropdown--item']} role="menuitem">
           <Link href="/about">
             <a
               className={`${pathname === '/about' ? [styles.active] : ""}`}
+              onClick={() => setIsClosed(true)}
             >Sobre mim</a>
           </Link>
-        </div>
-        <div className={styles['dropdown--item']}>
+        </li>
+        <li className={styles['dropdown--item']} role="menuitem">
           <Link href="/projects">
             <a
               className={`${pathname === '/projects' ? [styles.active] : ""}`}
+              onClick={() => setIsClosed(true)}
             >Projetos</a>
           </Link>
-        </div>
-        <div className={styles['dropdown--item']}>
+        </li>
+        <li className={styles['dropdown--item']}>
           <button>Começe um projeto</button>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </nav>
   )
 }

@@ -1,5 +1,6 @@
 .dropdown--menu {
   position: relative;
+  
   .dropdown--trigger {
     border: 0;
     background-color: transparent;
@@ -40,7 +41,7 @@
     &[data-close= true] {
       svg {
         transform: rotate(0);
-        transition: transform 300ms ease-in-out;
+        transition: transform 200ms ease-in-out;
 
         line {
 
@@ -67,6 +68,7 @@
 
   .dropdown--container {
     position: absolute;
+    z-index: 999;
     right: 0;
     display: flex;
     gap: 3.75rem;
@@ -77,9 +79,17 @@
     padding: 1.5rem;
     width: 200px;
     border-radius: 8px;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    list-style: none;
+
 
     &.collapsed {
+      transform: translateY(-40px);
       visibility: hidden;
+      opacity: 0;
     }
 
     .dropdown--item {

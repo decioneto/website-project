@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 export function Header() {
   
   return (
-    <div className={styles.container}>
+    <menu className={styles.container}>
       <div className={styles.nav}>
         <Link href="/">
           <a>
@@ -16,6 +16,6 @@ export function Header() {
         
         <DropdownMenu />
       </div>
-    </div>
+    </menu>
   )
 }
