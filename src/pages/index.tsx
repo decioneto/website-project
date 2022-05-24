@@ -6,9 +6,6 @@ export default function Home() {
       <Head>
         <title>Website</title>
       </Head>
-
-      <h1>Hello, world!</h1>
-      <button>Label</button>
     </div>
   )
 }

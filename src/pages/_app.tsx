@@ -1,5 +1,7 @@
 import Head from "next/head"
-import GlobalStyle from '../styles/global'
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import '../styles/global.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,10 +11,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <main>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </main>
-
-      <GlobalStyle />
     </>
   )
 }
