@@ -1,0 +1,45 @@
+.container {
+    min-height: min(50vw, 800px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  h1 {
+    color: red;
+    color: var(--purple-100);
+    text-align: center;
+
+    > p {
+      color: var(--dark-purple-100);
+      max-width: 800px;
+      
+      mark {
+        background-color: var(--lime-100);
+      }
+    }
+  }
+
+  .subtitle {
+    color: gray;
+  }
+}
+
+.graphElement {
+  position: absolute;
+  background-image: url("../../../public/images/element-bg.svg");
+  background-repeat: no-repeat;
+  height: 950px;
+  width: 950px;
+  z-index: -1;
+
+  &.graph1 {
+    top: 10%;
+    left: -50%;
+  }
+
+  &.graph2 {
+    top: -60%;
+    left: 70%;
+  }
+}

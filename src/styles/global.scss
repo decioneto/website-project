@@ -1,6 +1,6 @@
 :root {
   //TYPOGRAPHY
-  --title-font-family: font-family: 'Merriweather', serif;
+  --title-font-family: 'Merriweather', serif;
   --body-font-family: 'Inria Sans', sans-serif;
   
   //FONT-SIZE
@@ -26,6 +26,19 @@
 
   --body-regular: 400;
   --body-bold: 700;
+
+  //FONT LINE HEIGHT
+  --h1-height: 4.5rem;
+  --h2-height: 3rem;
+  --h3-height: 2.25rem;
+  --h4-height: 1.875rem;
+  --h5-height: 1.5rem;
+  --h6-height: 1.5rem;
+
+  --body-lg-height: 1.687rem;
+  --body-md-height: 1.5rem;
+  --body-sm-height: 1.312rem;
+  --body-xs-height: 1.125rem;
 
   // COLOR STYLES
   --black: #000;
@@ -83,7 +96,9 @@ body {
   font-family: var(--body-font-family);
   font-weight: var(--body-regular);
   font-size: var(--body-md);
+  line-height: var(--body-md-height);
   color: var(--dark-purple-100);
+  overflow-x: hidden;
 }
 
 button {
@@ -98,5 +113,8 @@ input, textarea, select {
   font-family: var(--body-font-family);
   font-weight: var(--body-regular);
   font-size: var(--body-md);
-  color: var(--dark-purple-100);
+}
+  
+.main {
+  position: relative;
 }

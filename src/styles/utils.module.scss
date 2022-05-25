@@ -1,0 +1,66 @@
+.padding-top-page {
+  padding-top: 120px;
+}
+
+.side-paddings {
+  @media(min-width: 1140px) {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+
+  @media(max-width: 1140px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media(max-width: 720px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.h1 {
+  font-family: var(--title-font-family);
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-height) !important;
+}
+
+.h2 {
+  font-family: var(--title-font-family);
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-height) !important;
+}
+
+.h3 {
+  font-family: var(--title-font-family);
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-height) !important;
+}
+
+.h4 {
+  font-family: var(--title-font-family);
+  font-size: var(--h4-font-size);
+  font-weight: var(--h4-font-weight);
+  line-height: var(--h4-height) !important;
+}
+
+.h5 {
+  font-family: var(--title-font-family);
+  font-size: var(--h5-font-size);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-height) !important;
+}
+
+.h6 {
+  font-family: var(--title-font-family);
+  font-size: var(--h6-font-size);
+  font-weight: var(--h6-font-weight);
+  line-height: var(--h6-height) !important;
+}
+
+.button {
+  padding: 0.75rem 3rem;
+}

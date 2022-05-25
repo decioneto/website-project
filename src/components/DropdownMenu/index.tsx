@@ -64,9 +64,9 @@ export function DropdownMenu() {
           role="menuitem"
           aria-labelledby="item2"
         >
-          <Link href="/about">
+          <Link href="/about-me">
             <a
-              className={`${pathname === "/about" ? [styles.active] : ""}`}
+              className={`${pathname === "/about-me" ? [styles.active] : ""}`}
               onClick={() => setIsClosed(true)}
               id="item2"
             >
