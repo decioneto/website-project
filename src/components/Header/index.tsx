@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { DropdownMenu } from '../DropdownMenu'
-import styles from './styles.module.scss'
+import Image from "next/image"
+import Link from "next/link"
+import { DropdownMenu } from "../DropdownMenu"
+import styles from "./styles.module.scss"
 
 export function Header() {
-  
   return (
     <menu className={styles.container}>
       <div className={styles.nav}>
@@ -13,7 +12,7 @@ export function Header() {
             <Image src="/images/logo.png" height={72} width={72} alt="" />
           </a>
         </Link>
-        
+
         <DropdownMenu />
       </div>
     </menu>

@@ -93,6 +93,25 @@
     }
 
     .dropdown--item {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -150%;
+        right: 0;
+        height: 1px;
+        width: 50px;
+        background-color: var(--dark-purple-300);
+      }
+
+      &:first-child {
+        &::after {
+          content: "";
+          display: none;
+        }
+      }
+
       a {
         color: var(--dark-purple-100);
         text-decoration: none;
