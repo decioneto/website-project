@@ -16,9 +16,9 @@ export default function Home() {
             Me chamo Décio, sou <mark>Designer de Interfaces</mark> e <mark>Desenvolvedor Front-end</mark>
           </p>
         </h1>
-        <p>Eu crio e desenvolvo sites, aplicativos e sistemas para agências, empresas e todos buscam elevar a comunicação de sua empresa.</p>
+        <p className={styles.subtitle}>Eu crio e desenvolvo sites, aplicativos e sistemas para agências, empresas e todos buscam elevar a comunicação de sua empresa.</p>
       
-        <button className={utils['primary-button']}>Conheça meus trabalhos</button>
+        <a href='#' className={`${utils['primary-button']} ${utils.button}`}>Conheça meus trabalhos</a>
       </div>
 
       <div className={`${styles.graphElement} ${styles.graph1}`} />

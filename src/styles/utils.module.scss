@@ -63,4 +63,23 @@
 
 .button {
   padding: 0.75rem 3rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.primary-button {
+  background: var(--primary-gradient);
+  border: 1px solid;
+  color: var(--lime-300);
+
+  transition: box-shadow 150ms linear;
+
+  &:hover {
+    box-shadow: var(--button-purple-shadow);
+  }
+
+  &:active, &:focus {
+    border-color: var(--purple-300);
+  }
 }
