@@ -1,8 +1,8 @@
 :root {
   //TYPOGRAPHY
-  --title-font-family: 'Merriweather', serif;
-  --body-font-family: 'Inria Sans', sans-serif;
-  
+  --title-font-family: "Merriweather", serif;
+  --body-font-family: "Inria Sans", sans-serif;
+
   //FONT-SIZE
   --h1-font-size: 3rem;
   --h2-font-size: 2rem;
@@ -42,29 +42,33 @@
 
   // COLOR STYLES
   --black: #000;
-  --gray-10: #1F1B29;
-  --gray-25: #2E2A36;
+  --gray-10: #1f1b29;
+  --gray-25: #2e2a36;
   --gray-50: #616161;
-  --gray-100: #99969E;
-  --gray-200: #BAB9BD;
-  --gray-300: #DEDEE0;
-  --gray-400: #ECECEE;
-  --gray-500: #F3F3F5;
-  --gray-600: #FAFAFA;
+  --gray-100: #99969e;
+  --gray-200: #bab9bd;
+  --gray-300: #dedee0;
+  --gray-400: #ececee;
+  --gray-500: #f3f3f5;
+  --gray-600: #fafafa;
 
-  --purple-100: #5603AD;
-  --purple-200: #8367C7;
-  --purple-300: #B99CFF;
+  --purple-100: #5603ad;
+  --purple-200: #8367c7;
+  --purple-300: #b99cff;
 
-  --dark-purple-100: #1D0B31;
-  --dark-purple-200: #6A637C;
-  --dark-purple-300: #CDC6DD;
+  --dark-purple-100: #1d0b31;
+  --dark-purple-200: #6a637c;
+  --dark-purple-300: #cdc6dd;
 
-  --lime-100: #B3E9C7;
-  --lime-200: #C2F8CB;
-  --lime-300: #F0FFF1;
+  --lime-100: #b3e9c7;
+  --lime-200: #c2f8cb;
+  --lime-300: #f0fff1;
 
-  --primary-gradient: linear-gradient(95.5deg, var(--purple-100) 4.7%, var(--lime-100) 123.14%);
+  --primary-gradient: linear-gradient(
+    95.5deg,
+    var(--purple-100) 4.7%,
+    var(--lime-100) 123.14%
+  );
 
   //EFECTS STYLES
   --button-shadow: -4px 4px 16px rgba(39, 39, 39, 0.21);
@@ -109,12 +113,14 @@ button {
   text-transform: uppercase;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--body-font-family);
   font-weight: var(--body-regular);
   font-size: var(--body-md);
 }
-  
+
 .main {
   position: relative;
 }

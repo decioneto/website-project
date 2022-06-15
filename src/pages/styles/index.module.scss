@@ -1,9 +1,9 @@
 .container {
-    min-height: min(50vw, 800px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  min-height: min(50vw, 800px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   h1 {
     color: red;
@@ -13,7 +13,7 @@
     > p {
       color: var(--dark-purple-100);
       max-width: 800px;
-      
+
       mark {
         background-color: var(--lime-100);
       }
@@ -22,6 +22,10 @@
 
   .subtitle {
     margin: 2rem 0;
+  }
+
+  a {
+    margin-bottom: 3rem;
   }
 }
 
@@ -41,5 +45,83 @@
   &.graph2 {
     top: -60%;
     left: 70%;
+  }
+}
+
+.aboutme {
+  position: relative;
+  padding: 3.5rem 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--purple-100);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  h2 {
+    color: var(--lime-300);
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  p {
+    max-width: 560px;
+    color: var(--dark-purple-300);
+    text-align: center;
+  }
+}
+
+.card__container {
+  display: flex;
+  gap: 2rem;
+  margin-top: -260px;
+  margin-bottom: 7rem;
+
+  @media(max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.card {
+  padding: 3.5rem;
+  background-color: var(--gray-600);
+  box-shadow: var(--button-shadow);
+  border-radius: 8px;
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    padding: 1.5rem 0 0.5rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h4 {
+    color: var(--purple-100);
+    text-align: center;
+  }
+
+  .separator {
+    margin: 3.5rem 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-purple-300)
   }
 }

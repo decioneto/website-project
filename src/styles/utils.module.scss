@@ -3,17 +3,17 @@
 }
 
 .side-paddings {
-  @media(min-width: 1140px) {
+  @media (min-width: 1140px) {
     padding-left: 140px;
     padding-right: 140px;
   }
 
-  @media(max-width: 1140px) {
+  @media (max-width: 1140px) {
     padding-left: 70px;
     padding-right: 70px;
   }
 
-  @media(max-width: 720px) {
+  @media (max-width: 720px) {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -66,11 +66,11 @@
   border-radius: 8px;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 }
 
 .primary-button {
   background: var(--primary-gradient);
-  border: 1px solid;
   color: var(--lime-300);
 
   transition: box-shadow 150ms linear;
@@ -79,7 +79,8 @@
     box-shadow: var(--button-purple-shadow);
   }
 
-  &:active, &:focus {
-    border-color: var(--purple-300);
+  &:active,
+  &:focus {
+    outline: 1px solid var(--purple-300);
   }
 }
