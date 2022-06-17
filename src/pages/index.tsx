@@ -1,7 +1,10 @@
 import Head from "next/head"
 import Image from "next/image"
+import { Filter } from 'react-feather'
 import styles from "./styles/index.module.scss"
 import utils from "../styles/utils.module.scss"
+import Link from "next/link"
+import { ProjectContainer } from "../components/ProjectContainer"
 
 export default function Home() {
   return (
@@ -52,7 +55,7 @@ export default function Home() {
         </p>
       </section>
 
-      <div className={styles.card__container}>
+      <div className={styles["card__container"]}>
         <div className={styles.card}>
           <Image src="/images/icon-design.png" width={80} height={80}></Image>
           <h3 className={utils.h3}>Design de interfaces</h3>
@@ -104,6 +107,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <ProjectContainer />
     </div>
   )
 }

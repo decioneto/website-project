@@ -67,6 +67,15 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  font-weight: bold ;
+  display: inline-block;
+}
+
+.button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .primary-button {
@@ -81,6 +90,38 @@
 
   &:active,
   &:focus {
+    outline: 1px solid var(--purple-300);
+  }
+}
+
+.secondary-button {
+  background: var(--lime-100);
+  color: var(--purple-100);
+
+  transition: box-shadow 150ms linear;
+
+  &:hover {
+    box-shadow: var(--button-shadow);
+  }
+
+  &:active, 
+  &:focus {
+    outline: 1px solid var(--purple-300);
+  }
+}
+
+.tertiary-button {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--purple-100);
+
+  transition: background-color 150ms linear;
+
+  &:hover {
+    background-color: rgba(86, 3, 173, 0.1);
+  }
+
+  &:active, &:focus {
     outline: 1px solid var(--purple-300);
   }
 }
