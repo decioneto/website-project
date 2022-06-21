@@ -4,11 +4,18 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  margin-bottom: 7rem;
 
   .project-container-header {
     display: flex;
     justify-content: center;
     position: relative;
+
+    h2 {
+      @media(max-width: 960px) {
+        text-align: center;
+      }
+    }
   }
 
   .project-grid {
@@ -17,6 +24,11 @@
     grid-template-rows: repeat(2, 20vw);
     gap: 2rem;
     width: 100%;
+
+    @media(max-width: 960px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 30vw);
+    }
 
     .project-card {
       overflow: hidden;
@@ -51,6 +63,10 @@
         opacity: 0;
 
         transition: background-color 200ms linear, opacity 250ms linear;
+
+        @media(max-width: 960px) {
+          display: none;
+        }
 
         h3 {
           color: white;
