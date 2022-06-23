@@ -46,42 +46,6 @@ export function ProjectContainer() {
           </div>
           <div className={styles["card-image"]}></div>
         </div>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
       </div>
 
       <Link href={"#"}>

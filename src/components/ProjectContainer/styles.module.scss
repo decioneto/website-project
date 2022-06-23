@@ -19,21 +19,34 @@
   }
 
   .project-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 20vw);
+    grid-template-rows: 20vw;
     gap: 2rem;
     width: 100%;
+    flex-wrap: wrap;
 
     @media(max-width: 960px) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 30vw);
+      grid-template-rows: repeat(2, 30vw);
     }
 
     .project-card {
       overflow: hidden;
       border-radius: 8px;
       position: relative;
+      flex: 1;
+      min-height: 20vw;
+      min-width: 200px;
+
+      @media(max-width: 960px) {
+        min-height: 30vw;
+      }
+
+      @media(max-width: 960px) {
+        min-height: 50vw;
+      }
+
 
       &:hover {
         & > .card-infos {

@@ -37,6 +37,10 @@
   width: 950px;
   z-index: -1;
 
+  @media(max-width: 960px) {
+    display: none;
+  }
+
   &.graph1 {
     top: 10%;
     left: -50%;
