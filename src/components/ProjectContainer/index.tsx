@@ -1,8 +1,23 @@
+import { ProjectCard } from "../ProjectCard"
+import Link from "next/link"
 import styles from "./styles.module.scss"
 import utils from "../../styles/utils.module.scss"
-import Link from "next/link"
 
-export function ProjectContainer() {
+interface GetProjectsQuery {
+  projects: {
+    id: string;
+    projectType: 'develop' | 'interface';
+    title: string;
+    slug: string;
+    coverImage: {
+      id: string;
+      url: string;
+    }
+  }[]
+}
+
+export function ProjectContainer({ projects }: GetProjectsQuery) {
+
   return (
     <div className={styles["project-container"]} id="jobs">
       <div className={styles["project-container-header"]}>
@@ -10,45 +25,20 @@ export function ProjectContainer() {
       </div>
 
       <div className={styles["project-grid"]}>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
-        <div className={styles["project-card"]}>
-          <div className={styles["card-infos"]}>
-            <h3 className={utils.h3}>Blinket App</h3>
-            <p>Aplicativo Mobile</p>
-            <Link href={"#"}>
-              <a className={`${utils.button} ${utils["secondary-button"]}`}>
-                Conheça o projeto
-              </a>
-            </Link>
-          </div>
-          <div className={styles["card-image"]}></div>
-        </div>
+        {
+          projects.map(project => (
+            <ProjectCard
+              key={project.id} 
+              name={project.title}
+              slug={project.slug}
+              type={project.projectType}
+              cover={project.coverImage.url}
+            />
+          ))
+        }
       </div>
 
-      <Link href={"#"}>
+      <Link href="#">
         <a className={`${utils.button} ${utils["primary-button"]}`}>
           Ver todos
         </a>

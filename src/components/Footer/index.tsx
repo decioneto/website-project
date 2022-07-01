@@ -58,6 +58,16 @@ export function Footer() {
             />
           </a>
         </li>
+        <li role="menuitem">
+          <a href="https://github.com/decioneto" target="_blank ">
+            <Image
+              src="/images/github.svg" 
+              width={24}
+              height={24}
+              alt="Ver meu perfil no Behance"
+            />
+          </a>
+        </li>
       </ul>
 
       <small>&copy;2022 Décio Neto</small>
