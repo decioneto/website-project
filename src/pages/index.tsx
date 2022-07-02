@@ -9,6 +9,7 @@ import { Depositions } from "../components/Depositions"
 import { GetStaticProps } from "next"
 import { client } from "../lib/apollo"
 import { gql } from "@apollo/client"
+import Link from "next/link"
 
 interface GetProjectsQuery {
   projects: {
@@ -43,12 +44,13 @@ export default function Home({projects}: GetProjectsQuery) {
           empresas e todos buscam elevar a comunicação de sua empresa.
         </p>
 
-        <a
-          href="#jobs"
-          className={`${utils["primary-button"]} ${utils.button}`}
-        >
-          Conheça meus trabalhos
-        </a>
+        <Link href="projects">
+          <a
+            className={`${utils["primary-button"]} ${utils.button}`}
+          >
+            Conheça meus trabalhos
+          </a>
+        </Link>
       </div>
 
       <div className={`${styles.graphElement} ${styles.graph1}`} />

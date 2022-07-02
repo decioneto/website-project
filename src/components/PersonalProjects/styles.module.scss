@@ -31,13 +31,9 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 500px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 500px));
   justify-content: center;
   gap: 2rem;
-
-  @media(max-width: 720px) {
-    grid-template-columns: 1fr;
-  }
 
   .project-card {
     background-color: #fff;

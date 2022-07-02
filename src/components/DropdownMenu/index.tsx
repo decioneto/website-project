@@ -64,7 +64,7 @@ export function DropdownMenu() {
           role="menuitem"
           aria-labelledby="item2"
         >
-          <Link href="/about-me">
+          <Link href="about-me">
             <a
               className={`${pathname === "/about-me" ? [styles.active] : ""}`}
               onClick={() => setIsClosed(true)}
@@ -79,7 +79,7 @@ export function DropdownMenu() {
           role="menuitem"
           aria-labelledby="item3"
         >
-          <Link href="/projects">
+          <Link href="projects">
             <a
               className={`${pathname === "/projects" ? [styles.active] : ""}`}
               onClick={() => setIsClosed(true)}

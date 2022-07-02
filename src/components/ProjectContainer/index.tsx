@@ -38,7 +38,7 @@ export function ProjectContainer({ projects }: GetProjectsQuery) {
         }
       </div>
 
-      <Link href="#">
+      <Link href="projects">
         <a className={`${utils.button} ${utils["primary-button"]}`}>
           Ver todos
         </a>
