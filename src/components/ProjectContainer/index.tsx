@@ -5,19 +5,18 @@ import utils from "../../styles/utils.module.scss"
 
 interface GetProjectsQuery {
   projects: {
-    id: string;
-    projectType: 'develop' | 'interface';
-    title: string;
-    slug: string;
+    id: string
+    projectType: "develop" | "interface"
+    title: string
+    slug: string
     coverImage: {
-      id: string;
-      url: string;
+      id: string
+      url: string
     }
   }[]
 }
 
 export function ProjectContainer({ projects }: GetProjectsQuery) {
-
   return (
     <div className={styles["project-container"]} id="jobs">
       <div className={styles["project-container-header"]}>
@@ -25,17 +24,15 @@ export function ProjectContainer({ projects }: GetProjectsQuery) {
       </div>
 
       <div className={styles["project-grid"]}>
-        {
-          projects.map(project => (
-            <ProjectCard
-              key={project.id} 
-              name={project.title}
-              slug={project.slug}
-              type={project.projectType}
-              cover={project.coverImage.url}
-            />
-          ))
-        }
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            name={project.title}
+            slug={project.slug}
+            type={project.projectType}
+            cover={project.coverImage.url}
+          />
+        ))}
       </div>
 
       <Link href="projects">

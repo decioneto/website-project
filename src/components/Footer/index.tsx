@@ -61,7 +61,7 @@ export function Footer() {
         <li role="menuitem">
           <a href="https://github.com/decioneto" target="_blank ">
             <Image
-              src="/images/github.svg" 
+              src="/images/github.svg"
               width={24}
               height={24}
               alt="Ver meu perfil no Behance"

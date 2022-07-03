@@ -34,43 +34,4 @@
   grid-template-columns: repeat(auto-fit, minmax(auto, 500px));
   justify-content: center;
   gap: 2rem;
-
-  .project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: var(--button-shadow);
-
-    @media(max-width: 420px) {
-      gap: 1.5rem;
-    }
-
-    .card-img {
-      width: auto;
-      height: 48px;
-      position: relative;
-    }
-
-    .status {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--purple-300);
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--purple-100);
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
 }

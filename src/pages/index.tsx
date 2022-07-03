@@ -13,18 +13,34 @@ import Link from "next/link"
 
 interface GetProjectsQuery {
   projects: {
-    id: string;
-    projectType: 'develop' | 'interface';
-    title: string;
-    slug: string;
+    id: string
+    projectType: "develop" | "interface"
+    title: string
+    slug: string
     coverImage: {
-      id: string;
-      url: string;
+      id: string
+      url: string
     }
   }[]
 }
 
-export default function Home({projects}: GetProjectsQuery) {
+interface GetPersonalProjectsQuery {
+  personalProjects: {
+    id: string
+    title: string
+    link: string
+    description: string
+    inProgress: boolean
+    projectLogo: {
+      url: string
+    }
+  }[]
+}
+
+export default function Home({
+  projects,
+  personalProjects,
+}: GetProjectsQuery & GetPersonalProjectsQuery) {
   return (
     <div className={`${utils["padding-top-page"]} ${utils["side-paddings"]}`}>
       <Head>
@@ -45,9 +61,7 @@ export default function Home({projects}: GetProjectsQuery) {
         </p>
 
         <Link href="projects">
-          <a
-            className={`${utils["primary-button"]} ${utils.button}`}
-          >
+          <a className={`${utils["primary-button"]} ${utils.button}`}>
             Conheça meus trabalhos
           </a>
         </Link>
@@ -60,7 +74,7 @@ export default function Home({projects}: GetProjectsQuery) {
 
       <ProjectContainer projects={projects} />
 
-      <PersonalProjects />
+      <PersonalProjects personalProjects={personalProjects} />
 
       <CallToAction />
 
@@ -83,16 +97,27 @@ export const getStaticProps: GetStaticProps = async () => {
             url
           }
         }
+        personalProjects {
+          id
+          title
+          link
+          description
+          inProgress
+          projectLogo {
+            url
+          }
+        }
       }
-  `,
+    `,
   })
 
-  const {projects} = data
+  const { projects, personalProjects } = data
 
   return {
     props: {
-      projects
+      projects,
+      personalProjects,
     },
-    revalidate: 60 * 60 * 24 
+    revalidate: 60 * 60 * 24,
   }
 }

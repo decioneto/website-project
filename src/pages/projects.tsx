@@ -1,5 +1,5 @@
 import Head from "next/head"
-import utils from '../styles/utils.module.scss'
+import utils from "../styles/utils.module.scss"
 
 export default function AboutMe() {
   return (
