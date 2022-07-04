@@ -99,10 +99,11 @@
   background: var(--lime-100);
   color: var(--purple-100);
 
-  transition: box-shadow 150ms linear;
+  transition: box-shadow, filter 150ms linear;
 
   &:hover {
     box-shadow: var(--button-shadow);
+    filter: brightness(0.93);
   }
 
   &:active, 

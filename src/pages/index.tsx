@@ -5,13 +5,12 @@ import { AboutMe } from "../components/AboutMe"
 import styles from "./styles/index.module.scss"
 import utils from "../styles/utils.module.scss"
 import { CallToAction } from "../components/CallToAction"
-import { Depositions } from "../components/Depositions"
 import { GetStaticProps } from "next"
 import { client } from "../lib/apollo"
 import { gql } from "@apollo/client"
 import Link from "next/link"
 
-interface GetProjectsQuery {
+export interface GetProjectsQuery {
   projects: {
     id: string
     projectType: "develop" | "interface"
@@ -60,7 +59,7 @@ export default function Home({
           empresas e todos buscam elevar a comunicação de sua empresa.
         </p>
 
-        <Link href="projects">
+        <Link href="projetos">
           <a className={`${utils["primary-button"]} ${utils.button}`}>
             Conheça meus trabalhos
           </a>

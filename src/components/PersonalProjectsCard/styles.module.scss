@@ -25,6 +25,12 @@
       align-items: center;
       gap: 0.75rem;
       color: var(--purple-300);
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
     }
 
     a {

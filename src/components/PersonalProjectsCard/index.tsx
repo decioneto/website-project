@@ -24,14 +24,14 @@ export function PersonalProjectsCard(props: PersonalProjectsCardProps) {
       </div>
 
       <p>{props.description}</p>
-
-      <div className={styles.status}>
-        {props.inProgress && (
-          <span>
+      
+      {props.inProgress && (
+        <div className={styles.status}>
+          <div>
             <Tool size={16} /> Em desenvolvimento
-          </span>
-        )}
+          </div>
       </div>
+      )}
 
       <a target="_blank" href={props.link}>
         Veja o projeto no GitHub

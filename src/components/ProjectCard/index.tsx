@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard(props: ProjectCardProps) {
   return (
-    <Link href={`/produtos/${props.slug}`}>
+    <Link href={`/projetos/${props.slug}`}>
       <div className={styles["project-card"]}>
         <div className={styles["card-infos"]}>
           <h3 className={utils.h3}>{props.name}</h3>
