@@ -1,0 +1,15 @@
+.container {
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  margin-bottom: 7rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
+  gap: 2rem;
+  justify-content: center;
+}

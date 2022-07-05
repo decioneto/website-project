@@ -1,0 +1,29 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 7rem;
+
+  .project-container-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    h2 {
+      @media(max-width: 960px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .project-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 500px));
+    grid-template-rows: 20vw;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

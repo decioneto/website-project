@@ -1,0 +1,139 @@
+:root {
+  //TYPOGRAPHY
+  --title-font-family: "Merriweather", serif;
+  --body-font-family: "Inria Sans", sans-serif;
+
+  //FONT-SIZE
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.25rem;
+  --h5-font-size: 1rem;
+  --h6-font-size: 1rem;
+
+  --body-lg: 1.25rem;
+  --body-md: 1rem;
+  --body-sm: 0.875rem;
+  --body-xs: 0.75rem;
+
+  //FONT-WEIGHT
+  --h1-font-weight: 400;
+  --h2-font-weight: 400;
+  --h3-font-weight: 400;
+  --h4-font-weight: 700;
+  --h5-font-weight: 400;
+  --h6-font-weight: 700;
+
+  --body-regular: 400;
+  --body-bold: 700;
+
+  //FONT LINE HEIGHT
+  --h1-height: 4.5rem;
+  --h2-height: 3rem;
+  --h3-height: 2.25rem;
+  --h4-height: 1.875rem;
+  --h5-height: 1.5rem;
+  --h6-height: 1.5rem;
+
+  --body-lg-height: 1.687rem;
+  --body-md-height: 1.5rem;
+  --body-sm-height: 1.312rem;
+  --body-xs-height: 1.125rem;
+
+  // COLOR STYLES
+  --black: #000;
+  --gray-10: #1f1b29;
+  --gray-25: #2e2a36;
+  --gray-50: #616161;
+  --gray-100: #99969e;
+  --gray-200: #bab9bd;
+  --gray-300: #dedee0;
+  --gray-400: #ececee;
+  --gray-500: #f3f3f5;
+  --gray-600: #fafafa;
+
+  --purple-100: #5603ad;
+  --purple-200: #8367c7;
+  --purple-300: #b99cff;
+
+  --dark-purple-100: #1d0b31;
+  --dark-purple-200: #6a637c;
+  --dark-purple-300: #cdc6dd;
+
+  --lime-100: #b3e9c7;
+  --lime-200: #c2f8cb;
+  --lime-300: #f0fff1;
+
+  --primary-gradient: linear-gradient(
+    95.5deg,
+    var(--purple-100) 4.7%,
+    var(--lime-100) 123.14%
+  );
+
+  //EFECTS STYLES
+  --button-shadow: -4px 4px 16px rgba(39, 39, 39, 0.21);
+  --button-purple-shadow: -4px 4px 16px rgba(131, 103, 199, 0.4);
+
+  //SCREEN SIZES
+
+  --desktop: 1080px;
+  --tablet: 960px;
+  --mobile: 720px;
+  --mobile-sm: 420px;
+
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray-600);
+  font-family: var(--body-font-family);
+  font-weight: var(--body-regular);
+  font-size: var(--body-md);
+  line-height: var(--body-md-height);
+  color: var(--dark-purple-100);
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--gray-600);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--purple-200);
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--body-font-family);
+  font-size: var(--body-sm);
+  font-weight: var(--body-bold);
+  text-transform: uppercase;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--body-font-family);
+  font-weight: var(--body-regular);
+  font-size: var(--body-md);
+}
+
+.main {
+  position: relative;
+}

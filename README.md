@@ -17,8 +17,8 @@ Personal website to post my projects and jobs.
 
 - Next js;
 - Typescript;
-- Styled-components;
-- Material UI;
+- GraphQL
+- GraphCMS
 
 ## Author
 

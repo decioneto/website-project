@@ -1,0 +1,53 @@
+.container {
+  min-height: min(50vw, 800px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: red;
+    color: var(--purple-100);
+    text-align: center;
+
+    > p {
+      color: var(--dark-purple-100);
+      max-width: 800px;
+
+      mark {
+        background-color: var(--lime-100);
+      }
+    }
+  }
+
+  .subtitle {
+    margin: 2rem 0;
+  }
+
+  a {
+    margin-bottom: 3rem;
+  }
+}
+
+.graphElement {
+  position: absolute;
+  background-image: url("../../../public/images/element-bg.svg");
+  background-repeat: no-repeat;
+  height: 950px;
+  width: 950px;
+  z-index: -1;
+
+  @media(max-width: 960px) {
+    display: none;
+  }
+
+  &.graph1 {
+    top: 10%;
+    left: -50%;
+  }
+
+  &.graph2 {
+    top: -60%;
+    left: 70%;
+  }
+}

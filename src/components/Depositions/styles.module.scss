@@ -1,0 +1,49 @@
+.container {
+  margin-bottom: 7rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .deposition-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .deposition-card {
+    flex: 1;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    .deposition-text {
+      position: relative;
+      text-align: center;
+
+      img {
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        z-index: -1;
+      }
+    }
+
+    .deposition-author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .author-pic {
+        height: 64px;
+        width: 64px;
+        background-color: var(--gray-300);
+        border-radius: 50%;
+      }
+    }
+  }
+}
