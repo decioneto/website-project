@@ -1,7 +1,8 @@
 import Head from "next/head"
+import { AboutMe } from "../components/AboutMe"
 import utils from "../styles/utils.module.scss"
 
-export default function AboutMe() {
+export default function AboutMePage() {
   return (
     <>
       <Head>
@@ -9,7 +10,7 @@ export default function AboutMe() {
       </Head>
 
       <div className={`${utils["padding-top-page"]} ${utils["side-paddings"]}`}>
-        <h1>Sobre mim</h1>
+        <AboutMe />
       </div>
     </>
   )

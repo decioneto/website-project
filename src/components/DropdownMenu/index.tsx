@@ -59,7 +59,7 @@ export function DropdownMenu() {
             </a>
           </Link>
         </li>
-        <li
+        {/* <li
           className={styles["dropdown--item"]}
           role="menuitem"
           aria-labelledby="item2"
@@ -73,7 +73,7 @@ export function DropdownMenu() {
               Sobre mim
             </a>
           </Link>
-        </li>
+        </li> */}
         <li
           className={styles["dropdown--item"]}
           role="menuitem"
@@ -81,7 +81,7 @@ export function DropdownMenu() {
         >
           <Link href="projetos">
             <a
-              className={`${pathname === "/projects" ? [styles.active] : ""}`}
+              className={`${pathname === "/projetos" ? [styles.active] : ""}`}
               onClick={() => setIsClosed(true)}
               id="item3"
             >
@@ -89,8 +89,22 @@ export function DropdownMenu() {
             </a>
           </Link>
         </li>
-        <li className={styles["dropdown--item"]} aria-labelledby="item4">
-          <button id="item4">Começe um projeto</button>
+        <li
+          className={styles["dropdown--item"]}
+          role="menuitem"
+          aria-labelledby="item4"
+        >
+          <Link href="entre-em-contato">
+            <a
+              className={`${
+                pathname === "/entre-em-contato" ? [styles.active] : ""
+              }`}
+              onClick={() => setIsClosed(true)}
+              id="item4"
+            >
+              Começe um projeto
+            </a>
+          </Link>
         </li>
       </ul>
     </nav>

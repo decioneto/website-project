@@ -4,7 +4,7 @@ import { client } from "../lib/apollo"
 import { gql } from "@apollo/client"
 import { GetProjectsQuery } from "."
 
-import styles from './styles/projects.module.scss'
+import styles from "./styles/projects.module.scss"
 import utils from "../styles/utils.module.scss"
 import { ProjectCard } from "../components/ProjectCard"
 
@@ -18,17 +18,15 @@ export default function AboutMe({ projects }: GetProjectsQuery) {
         <h2 className={utils.h2}>Conheça meus projetos</h2>
 
         <div className={styles["projects-grid"]}>
-          {
-            projects.map(project => (
-              <ProjectCard
-                key={project.id}
-                name={project.title}
-                slug={project.slug}
-                type={project.projectType}
-                cover={project.coverImage.url}
-              />
-            ))
-          }
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              name={project.title}
+              slug={project.slug}
+              type={project.projectType}
+              cover={project.coverImage.url}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -36,7 +34,7 @@ export default function AboutMe({ projects }: GetProjectsQuery) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const {data} = await client.query({
+  const { data } = await client.query({
     query: gql`
       query Projects {
         projects {
@@ -53,12 +51,12 @@ export const getStaticProps: GetStaticProps = async () => {
     `,
   })
 
-  const {projects} = data
+  const { projects } = data
 
   return {
     props: {
-      projects
+      projects,
     },
-    revalidate: 60 * 60 * 24
+    revalidate: 60 * 60 * 24,
   }
 }

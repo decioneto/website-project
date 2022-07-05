@@ -26,6 +26,10 @@
     gap: 32px;
     margin-bottom: 4rem;
 
+    @media(max-width: 420px) {
+      gap: 0.75rem;
+    }
+
     li {
       height: 48px;
       width: 48px;

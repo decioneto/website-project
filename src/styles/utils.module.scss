@@ -127,3 +127,52 @@
     outline: 1px solid var(--purple-300);
   }
 }
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  margin-bottom: 1.5rem;
+
+  label {
+    color: var(--purple-100);
+  }
+}
+
+.form-input {
+  width: 100%;
+  padding: 0 1rem;
+  height: 48px;
+  background-color: var(--gray-500);
+  border: 0;
+  border-radius: 8px;
+  color: var(--purple-100);
+
+  &:focus {
+    outline: 1px solid var(--purple-100);
+  }
+
+  & option {
+    color: var(--purple-100);
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border: 0;
+  border-radius: 8px;
+  resize: none;
+  color: var(--purple-100);
+
+  &:focus {
+    outline: 1px solid var(--purple-100);
+  }
+}
