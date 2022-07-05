@@ -50,7 +50,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </div>
 
         <div className={styles["button-container"]}>
-          <Link href="/projetos">
+          <Link href="projetos">
             <button
               className={`${utils["tertiary-button"]} ${utils.button} ${utils["button-icon"]}`}
             >

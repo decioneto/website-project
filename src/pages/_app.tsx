@@ -4,6 +4,7 @@ import Head from "next/head"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import "../styles/global.scss"
+import { Toaster } from "react-hot-toast"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
 
       <main>
         <Header />
+        <Toaster position="top-right" />
         <Component {...pageProps} />
         <Footer />
       </main>
