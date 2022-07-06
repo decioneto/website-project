@@ -10,6 +10,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
         </Head>
         <body>
           <Main />
