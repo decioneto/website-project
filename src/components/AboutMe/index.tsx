@@ -10,8 +10,8 @@ export function AboutMe() {
         <Image
           src="/images/profile.png"
           alt="Minha foto de apresentação"
-          width={240}
-          height={240}
+          width={180}
+          height={180}
         />
 
         <h2 className={utils.h2}>Muito prazer!</h2>
