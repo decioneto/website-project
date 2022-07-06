@@ -16,8 +16,9 @@ export async function sendContactMail(
   }
 
   try {
-    return await axios.post("/api/contact", data)
+    return await axios.post("../api/contact", data)
   } catch (err) {
+    console.log(err)
     return err
   }
 }
