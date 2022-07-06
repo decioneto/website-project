@@ -29,7 +29,12 @@ export function AboutMe() {
 
       <div className={styles["card__container"]}>
         <div className={styles.card}>
-          <Image src="/images/icon-design.png" width={80} height={80}></Image>
+          <Image
+            src="/images/icon-design.png"
+            width={80}
+            height={80}
+            alt="Ícone de um computador em cortorno de cor roxa"
+          />
           <h3 className={utils.h3}>Design de interfaces</h3>
           <p>
             Crio padrões de desings minimalistas, organizados, com
@@ -56,7 +61,12 @@ export function AboutMe() {
         </div>
 
         <div className={styles.card}>
-          <Image src="/images/icon-design.png" width={80} height={80}></Image>
+          <Image
+            src="/images/icon-dev.png"
+            width={80}
+            height={80}
+            alt="Ícone de um terminal windows de contorno roxo"
+          />
           <h3 className={utils.h3}>Programação Web e App</h3>
           <p>
             Desenvolvo aplicações do zero, com soluções criativas e dando a vida

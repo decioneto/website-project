@@ -20,6 +20,7 @@ export function PersonalProjectsCard(props: PersonalProjectsCardProps) {
           layout={"fill"}
           src={`${props.projectLogo.url}`}
           objectFit={"contain"}
+          alt={`Imagem do logo do projeto ${props.title}`}
         />
       </div>
 
