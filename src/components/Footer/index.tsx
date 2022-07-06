@@ -20,20 +20,6 @@ export function Footer() {
       <ul role="menu">
         <li role="menuitem">
           <a
-            href="https://www.instagram.com/decioneeto/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/images/instagram.svg"
-              width={24}
-              height={24}
-              alt="Ver meu perfil no Instagram"
-            />
-          </a>
-        </li>
-        <li role="menuitem">
-          <a
             href="https://www.linkedin.com/in/decioneto/"
             target="_blank"
             rel="noreferrer"
