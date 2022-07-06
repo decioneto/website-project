@@ -7,12 +7,13 @@ import { GetProjectsQuery } from "."
 import styles from "./styles/projects.module.scss"
 import utils from "../styles/utils.module.scss"
 import { ProjectCard } from "../components/ProjectCard"
+import { CallToAction } from "../components/CallToAction"
 
 export default function AboutMe({ projects }: GetProjectsQuery) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Produtos</title>
+        <title>Décio Neto - Conheça meus projetos e começe a criar o seu</title>
       </Head>
       <div className={`${utils["padding-top-page"]} ${utils["side-paddings"]}`}>
         <h2 className={utils.h2}>Conheça meus projetos</h2>
@@ -28,6 +29,8 @@ export default function AboutMe({ projects }: GetProjectsQuery) {
             />
           ))}
         </div>
+
+        <CallToAction />
       </div>
     </div>
   )

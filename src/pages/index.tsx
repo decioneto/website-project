@@ -43,7 +43,7 @@ export default function Home({
   return (
     <div className={`${utils["padding-top-page"]} ${utils["side-paddings"]}`}>
       <Head>
-        <title>Website</title>
+        <title>Décio Neto - Crio sites e interfaces para sua empresa</title>
       </Head>
 
       <div className={styles.container}>
