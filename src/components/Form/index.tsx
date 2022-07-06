@@ -1,57 +1,66 @@
-import { FormEvent, useState } from 'react'
-import { Send } from 'react-feather'
-import toast from 'react-hot-toast'
-import { sendContactMail } from '../../services/sendMail'
-import utils from '../../styles/utils.module.scss'
+import { FormEvent, useState } from "react"
+import { Send } from "react-feather"
+import toast from "react-hot-toast"
+import { sendContactMail } from "../../services/sendMail"
+import utils from "../../styles/utils.module.scss"
 
 export function Form() {
-  const [name, setName] = useState('')
-  const [company, setCompany] = useState('')
-  const [type, setType] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState("")
+  const [company, setCompany] = useState("")
+  const [type, setType] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
 
-    if(!name.trim() || !email.trim() || !type.trim() || !message.trim()) {
-      toast.error('Preencha todos os campos obrigatórios para enviar sua mensagem!', {
-        style: {
-          background: "#ea3942",
-          color: "#fff"
+    if (!name.trim() || !email.trim() || !type.trim() || !message.trim()) {
+      toast.error(
+        "Preencha todos os campos obrigatórios para enviar sua mensagem!",
+        {
+          style: {
+            background: "#ea3942",
+            color: "#fff",
+          },
         }
-      })
+      )
 
       return
     }
 
-   try {
-    setLoading(true)
-    await sendContactMail(name, company, type, email, message)
-    toast.success("Obrigado por querer fazer essa parceria, iremos conversar em breve!", {
-      style: {
-        background: "#40af4b",
-        color: "#fff"
-      },
-      duration: 5000
-    })
+    try {
+      setLoading(true)
+      await sendContactMail(name, company, type, email, message)
+      toast.success(
+        "Obrigado por querer fazer essa parceria, iremos conversar em breve!",
+        {
+          style: {
+            background: "#40af4b",
+            color: "#fff",
+          },
+          duration: 5000,
+        }
+      )
 
-    setName('')
-    setCompany('')
-    setEmail('')
-    setType('')
-    setMessage('')
-   } catch (error) {
-    toast.error("Ops! Ocorreu um erro ao tentar enviar esta mensagem, tente novamente!", {
-      style: {
-        background: "#ea3942",
-        color: "#fff"
-      }
-    })
-   } finally {
-    setLoading(false)
-   }
+      setName("")
+      setCompany("")
+      setEmail("")
+      setType("")
+      setMessage("")
+    } catch (error) {
+      toast.error(
+        "Ops! Ocorreu um erro ao tentar enviar esta mensagem, tente novamente!",
+        {
+          style: {
+            background: "#ea3942",
+            color: "#fff",
+          },
+        }
+      )
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -81,12 +90,12 @@ export function Form() {
       <div className={utils["form-row"]}>
         <div className={utils["form-group"]}>
           <label htmlFor="type">Tipo de projeto*</label>
-          <select 
-            id="type" 
+          <select
+            id="type"
             className={utils["form-input"]}
             value={type}
             onChange={(e) => setType(e.target.value)}
->
+          >
             <option value="selecione">Selecione</option>
             <option value="interface">Design de interface</option>
             <option value="develop">Desenvolvimento</option>

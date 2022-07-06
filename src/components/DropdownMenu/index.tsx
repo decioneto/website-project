@@ -96,9 +96,7 @@ export function DropdownMenu() {
         >
           <Link href="/contato">
             <a
-              className={`${
-                pathname === "/contato" ? [styles.active] : ""
-              }`}
+              className={`${pathname === "/contato" ? [styles.active] : ""}`}
               onClick={() => setIsClosed(true)}
               id="item4"
             >

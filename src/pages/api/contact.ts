@@ -1,14 +1,14 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from 'nodemailer'
-import sendgridTransport from 'nodemailer-sendgrid-transport'
+import { NextApiRequest, NextApiResponse } from "next"
+import nodemailer from "nodemailer"
+import sendgridTransport from "nodemailer-sendgrid-transport"
 
 const emailAdress = process.env.MAILADRESS
 
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key: process.env.SENDGRID_API_KEY
-    }
+      api_key: process.env.SENDGRID_API_KEY,
+    },
   })
 )
 
@@ -16,7 +16,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
   try {
     const { name, company, type, email, message } = req.body
 
-    if(!name.trim() || !type.trim() || !email.trim() || !message.trim()) {
+    if (!name.trim() || !type.trim() || !email.trim() || !message.trim()) {
       return res.status(403).send(1)
     }
 
@@ -31,18 +31,16 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         <p><strong>Tipo do projeto:</strong> ${type}</p><br />
         <p><strong>Mensagem:</strong> ${message}</p><br />
       `,
-      replyTo: email
+      replyTo: email,
     }
 
     transporter.sendMail(contactMessage)
-    
 
-    return res.send('');
-
+    return res.send("")
   } catch (err) {
     return res.json({
       error: true,
-      message: err.message
+      message: err.message,
     })
   }
 }

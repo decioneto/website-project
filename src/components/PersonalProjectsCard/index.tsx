@@ -33,7 +33,7 @@ export function PersonalProjectsCard(props: PersonalProjectsCardProps) {
         </div>
       )}
 
-      <a target="_blank" href={props.link}>
+      <a target="_blank" href={props.link} rel="noreferrer">
         Veja o projeto no GitHub
       </a>
     </div>
