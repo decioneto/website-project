@@ -37,7 +37,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className={styles["project-body"]}>
           <p className={styles.description}>{project.description}</p>
           <div className={styles.link}>
-            <a href={project.link} target="_blank">
+            <a href={project.link} target="_blank" rel="noreferrer">
               Acesse o link do projeto
             </a>
           </div>

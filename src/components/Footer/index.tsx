@@ -19,7 +19,7 @@ export function Footer() {
 
       <ul role="menu">
         <li role="menuitem">
-          <a href="https://www.instagram.com/decioneeto/" target="_blank ">
+          <a href="https://www.instagram.com/decioneeto/" target="_blank" rel="noreferrer">
             <Image
               src="/images/instagram.svg"
               width={24}
@@ -29,7 +29,7 @@ export function Footer() {
           </a>
         </li>
         <li role="menuitem">
-          <a href="https://www.linkedin.com/in/decioneto/" target="_blank">
+          <a href="https://www.linkedin.com/in/decioneto/" target="_blank" rel="noreferrer">
             <Image
               src="/images/linkedin.svg"
               width={24}
@@ -39,7 +39,7 @@ export function Footer() {
           </a>
         </li>
         <li role="menuitem">
-          <a href="https://dribbble.com/decioneto" target="_blank">
+          <a href="https://dribbble.com/decioneto" target="_blank" rel="noreferrer">
             <Image
               src="/images/dribbble.svg"
               width={24}
@@ -49,7 +49,7 @@ export function Footer() {
           </a>
         </li>
         <li role="menuitem">
-          <a href="https://www.behance.net/decioneto" target="_blank ">
+          <a href="https://www.behance.net/decioneto" target="_blank" rel="noreferrer">
             <Image
               src="/images/behance.svg"
               width={24}
@@ -59,7 +59,7 @@ export function Footer() {
           </a>
         </li>
         <li role="menuitem">
-          <a href="https://github.com/decioneto" target="_blank ">
+          <a href="https://github.com/decioneto" target="_blank" rel="noreferrer">
             <Image
               src="/images/github.svg"
               width={24}
