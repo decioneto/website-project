@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client"
 import { GetStaticPaths, GetStaticProps } from "next"
+import Router from "next/router"
 import { client } from "../../lib/apollo"
 
 import styles from "./styles.module.scss"
@@ -44,20 +45,19 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
           {project.projectImages.map((image, index) => (
             <div key={index} className={styles["project-img"]}>
-              <img src={image.url} alt="" />
+              <img src={image.url} alt={`Fotos do projeto ${project.title}`} />
             </div>
           ))}
         </div>
 
         <div className={styles["button-container"]}>
-          <Link href="projetos">
-            <button
-              className={`${utils["tertiary-button"]} ${utils.button} ${utils["button-icon"]}`}
-            >
-              Voltar
-              <ChevronLeft size={16} />
-            </button>
-          </Link>
+          <button
+            className={`${utils["tertiary-button"]} ${utils.button} ${utils["button-icon"]}`}
+            onClick={() => Router.back()}
+          >
+            Voltar
+            <ChevronLeft size={16} />
+          </button>
         </div>
 
         <CallToAction />

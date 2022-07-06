@@ -12,7 +12,10 @@ const transporter = nodemailer.createTransport(
   })
 )
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export default async function mailPost(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const { name, company, type, email, message } = req.body
 
