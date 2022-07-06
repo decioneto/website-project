@@ -2,7 +2,7 @@ import { gql } from "@apollo/client"
 import { GetServerSideProps } from "next"
 import { client } from "../lib/apollo"
 
-function generateSiteMap(projects) {
+function generateSiteMap(projects: {slug: string}[]) {
   return `
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
@@ -13,10 +13,16 @@ function generateSiteMap(projects) {
       <loc>https://decioneto.vercel.app/projetos</loc>
       <priority>0.80</priority>
     </url>
-    <url>
-      <loc>https://decioneto.vercel.app/projetos/${projects.slug}</loc>
-      <priority>0.80</priority>
-    </url>
+    ${
+      projects.map(project => {
+        return `
+          <url>
+            <loc>https://decioneto.vercel.app/projetos/${project.slug}</loc>
+            <priority>0.80</priority>
+          </url>
+        `
+      })
+    }
     <url>
       <loc>https://decioneto.vercel.app/contato</loc>
       <priority>0.80</priority>
