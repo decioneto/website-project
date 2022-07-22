@@ -23,8 +23,11 @@ class MyDocument extends Document {
             type="image/x-icon"
           />
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEYXRR5X6G" />
-          <script 
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-CEYXRR5X6G"
+          />
+          <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -32,7 +35,7 @@ class MyDocument extends Document {
               gtag('js', new Date());
   
               gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
-              `
+              `,
             }}
           />
         </Head>

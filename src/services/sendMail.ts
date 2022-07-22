@@ -18,6 +18,6 @@ export async function sendContactMail(
   try {
     return await axios.post("/api/contact", data)
   } catch (err) {
-    return err
+    console.log(err)
   }
 }

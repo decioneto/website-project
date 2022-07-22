@@ -38,6 +38,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     return res.send("")
   } catch (err) {
+    console.log(err)
     return res.json({
       error: true,
       message: err.message,
