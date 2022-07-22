@@ -22,6 +22,19 @@ class MyDocument extends Document {
             href="/images/favicon.ico"
             type="image/x-icon"
           />
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEYXRR5X6G" />
+          <script 
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+  
+              gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+              `
+            }}
+          />
         </Head>
         <body>
           <Main />
