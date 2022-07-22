@@ -1,3 +1,4 @@
+import axios from "axios"
 import { FormEvent, useState } from "react"
 import { Send } from "react-feather"
 import toast from "react-hot-toast"
@@ -12,7 +13,7 @@ export function Form() {
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
 
-  async function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault()
 
     if (!name.trim() || !email.trim() || !type.trim() || !message.trim()) {
@@ -31,23 +32,35 @@ export function Form() {
 
     try {
       setLoading(true)
-      await sendContactMail(name, company, type, email, message)
-      toast.success(
-        "Obrigado por querer fazer essa parceria, iremos conversar em breve!",
-        {
-          style: {
-            background: "#40af4b",
-            color: "#fff",
-          },
-          duration: 5000,
-        }
-      )
 
-      setName("")
-      setCompany("")
-      setEmail("")
-      setType("")
-      setMessage("")
+      axios
+        .post("/api/sendEmail", {
+          name,
+          company,
+          type,
+          email,
+          message,
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            toast.success(
+              "Obrigado por querer fazer essa parceria, iremos conversar em breve!",
+              {
+                style: {
+                  background: "#40af4b",
+                  color: "#fff",
+                },
+                duration: 5000,
+              }
+            )
+
+            setName("")
+            setCompany("")
+            setEmail("")
+            setType("")
+            setMessage("")
+          }
+        })
     } catch (error) {
       toast.error(
         "Ops! Ocorreu um erro ao tentar enviar esta mensagem, tente novamente!",
