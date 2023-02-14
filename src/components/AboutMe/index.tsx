@@ -37,10 +37,9 @@ export function AboutMe() {
           />
           <h3 className={utils.h3}>Design de interfaces</h3>
           <p>
-            Crio padrões de desings minimalistas, organizados, com
-            interatividade, de clara e simples comunicação, solucionando
-            problemas através de ideias criativas e buscando inovações sempre
-            que possível.
+            Crio padrões de design minimalistas, organizados, com
+            interatividade, de clara comunicação, solucionando problemas através
+            de ideias criativas e buscando inovações.
           </p>
 
           <div className={styles.separator}></div>
