@@ -55,8 +55,9 @@ export default function Home({
           </p>
         </h1>
         <p className={styles.subtitle}>
-          Eu crio e desenvolvo sites, aplicativos e sistemas para agências,
-          empresas e todos buscam elevar a comunicação de sua empresa.
+          Eu crio e desenvolvo sites, aplicativos e sistemas web para agências e
+          empresas ou todos que buscam elevar suas ideias para novos patamares.
+          Está querendo começar algum projeto? Entre em contato e vamos começar!
         </p>
 
         <Link href="projetos">

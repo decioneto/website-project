@@ -12,13 +12,10 @@ const transporter = nodemailer.createTransport(
   })
 )
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, company, type, email, message } = req.body
-
-    if (!name.trim() || !type.trim() || !email.trim() || !message.trim()) {
-      return res.status(403).send(1)
-    }
 
     const contactMessage = {
       from: emailAdress,

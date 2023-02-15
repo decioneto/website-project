@@ -13,20 +13,10 @@ interface SendEmailReponse {
   message: string
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const body: SendEmailReponse = req.body
-
-    if (
-      !body.name.trim() ||
-      !body.type.trim() ||
-      !body.email.trim() ||
-      !body.message.trim()
-    ) {
-      return res.status(403).send(1)
-    }
-
-    console.log(body)
 
     const data = {
       to: emailAdress,

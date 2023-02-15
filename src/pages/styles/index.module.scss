@@ -21,7 +21,12 @@
   }
 
   .subtitle {
-    margin: 2rem 0;
+    margin: 2rem 12rem;
+    text-align: center;
+
+    @media(max-width: 970px) {
+      margin: 2rem;
+    }
   }
 
   a {
