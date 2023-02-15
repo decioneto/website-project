@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
+import Script from "next/script"
 
 class MyDocument extends Document {
   render() {
@@ -7,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Eu crio e desenvolvo sites, aplicativos e sistemas para agências, empresas e todos buscam elevar a comunicação de sua empresa. Está querendo começar algum projeto? Entre em contato e vamos começar!"
+            content="Eu crio e desenvolvo sites, aplicativos e sistemas web para agências e empresas ou todos que buscam elevar suas ideias para novos patamares. Está querendo começar algum projeto? Entre em contato e vamos começar!"
           />
           <meta name="robots" content="index,follow" />
           <meta name="robots" content="all" />
@@ -23,7 +24,7 @@ class MyDocument extends Document {
             type="image/x-icon"
           />
 
-          <script
+          <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-CEYXRR5X6G"
           />
