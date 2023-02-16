@@ -1,41 +1,29 @@
-import sendgrid from "@sendgrid/mail"
 import { NextApiRequest, NextApiResponse } from "next"
+import { EmailData, EmailTransporter } from "../../emailTransporter/smtp"
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
-
-const emailAdress = process.env.MAILADRESS
-
-interface SendEmailReponse {
-  name: string
-  company: string
-  type: string
-  email: string
-  message: string
+interface SendEmailReponse extends NextApiRequest {
+  body: EmailData
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (req: SendEmailReponse, res: NextApiResponse) => {
   try {
-    const body: SendEmailReponse = req.body
+    const emailTransporter = new EmailTransporter()
+    const { company, email, message, name, type } = req.body
 
-    const data = {
-      to: emailAdress,
-      from: emailAdress,
-      subject: `Nova mensagem de contato - ${body.name}`,
-      html: `
-        <p><strong>Name:</strong> ${body.name}</p><br />
-        <p><strong>Email:</strong> ${body.email}</p><br />
-        <p><strong>Company:</strong> ${body.company}</p><br />
-        <p><strong>Tipo do projeto:</strong> ${body.type}</p><br />
-        <p><strong>Mensagem:</strong> ${body.message}</p><br />
-      `,
-      replyTo: body.email,
-    }
+    await emailTransporter.execute({
+      company,
+      email,
+      message,
+      name,
+      type,
+    })
 
-    await sendgrid.send(data)
-
-    return res.status(200).json({ status: "Ok" })
+    return res.status(200).json({ status: "success" })
   } catch (error) {
-    console.log(error, "erro na rota post")
+    return res.status(400).json({
+      message: error,
+      status: "fail",
+    })
   }
 }
