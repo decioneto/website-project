@@ -2,7 +2,6 @@ import axios from "axios"
 import { FormEvent, useState } from "react"
 import { Send } from "react-feather"
 import toast from "react-hot-toast"
-import { sendContactMail } from "../../services/sendMail"
 import utils from "../../styles/utils.module.scss"
 
 export function Form() {
@@ -30,9 +29,9 @@ export function Form() {
       return
     }
 
-    try {
-      setLoading(true)
+    setLoading(true)
 
+    try {
       axios
         .post("/api/sendEmail", {
           name,
