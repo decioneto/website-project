@@ -20,7 +20,7 @@ export function AboutMe() {
           Com mais de 10 anos como freelancer, tive grandes experiências e
           aprendizados trabalhando para agências e empresas que buscavam
           melhorias e facilidades para seu negócio, colaborando com
-          profissionais talentosos para crias soluções digitais para suas
+          profissionais talentosos para criar soluções digitais para suas
           empresas e usuários. Sou naturamente curioso e busco melhorar meu
           trabalho a cada projeto que inicio, trabalhando sempre com
           responsabilidade e confidencialidade.
